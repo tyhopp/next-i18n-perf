@@ -1,7 +1,7 @@
 const path = require('path')
 const fs = require('fs')
 
-const stub = Array(1000).fill(0)
+const stub = Array(30).fill(0)
 
 const page = `
 import Component from "../components/component"
