@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "create-seed": "node ./scripts/create-seed.js",
+    "create-component": "node ./scripts/create-component.js",
+    "create-pages": "node ./scripts/create-pages.js",
+    "bootstrap": "npm run create-seed && npm run create-component && npm run create-pages",
+    "build": "rm -rf ./.next && /usr/bin/time -o time.txt next build && cat time.txt",
+    "start": "next start"
   },
   "dependencies": {
     "@types/node": "20.2.5",
@@ -15,6 +17,7 @@
     "next": "13.4.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "server-only": "^0.0.1",
     "typescript": "5.0.4"
   }
 }
