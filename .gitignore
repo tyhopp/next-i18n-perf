@@ -35,3 +35,5 @@ yarn-error.log*
 next-env.d.ts
 
 time.txt
+src/app/seed.json
+src/app/components/component.tsx
